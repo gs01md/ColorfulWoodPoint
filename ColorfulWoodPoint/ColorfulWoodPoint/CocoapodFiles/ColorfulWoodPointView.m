@@ -70,23 +70,23 @@ static const int CWUB_POINT_TAG = 0x123;
 
     switch(direction){
         case CWPV_LEFT_TOP:
-            self.frame = CGRectMake(-self.m_pointRadius / 2,-self.m_pointRadius / 2,
+            self.frame = CGRectMake(-self.m_pointRadius / 2 - self.m_offset,-self.m_pointRadius / 2- self.m_offset,
                                     self.m_pointWidth, self.m_pointRadius);
             break;
 
         case CWPV_LEFT_BOTTOM:
-            self.frame = CGRectMake(-self.m_pointRadius / 2,targetView.frame.size.height - self.m_pointRadius * 0.8,
+            self.frame = CGRectMake(-self.m_pointRadius / 2- self.m_offset,targetView.frame.size.height - self.m_pointRadius * 0.8+self.m_offset,
                                     self.m_pointWidth, self.m_pointRadius);
             break;
 
         case CWPV_RIGHT_TOP:
-            self.frame = CGRectMake(targetView.frame.size.width - self.m_pointWidth / 2, -self.m_pointRadius / 2,
+            self.frame = CGRectMake(targetView.frame.size.width - self.m_pointWidth / 2 + self.m_offset, -self.m_pointRadius / 2 - self.m_offset,
                                     self.m_pointWidth, self.m_pointRadius);
             break;
 
         case CWPV_RIGHT_BOTTOM:
-            self.frame = CGRectMake(targetView.frame.size.width - 0.8 * self.m_pointRadius,
-                                    targetView.frame.size.height - self.m_pointRadius * 0.8,                                                     self.m_pointWidth, self.m_pointRadius);
+            self.frame = CGRectMake(targetView.frame.size.width - 0.8 * self.m_pointRadius + self.m_offset,
+                                    targetView.frame.size.height - self.m_pointRadius * 0.8 + self.m_offset,                                                     self.m_pointWidth, self.m_pointRadius);
             break;
     }
 }

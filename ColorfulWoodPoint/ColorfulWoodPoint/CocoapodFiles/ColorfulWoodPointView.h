@@ -24,7 +24,10 @@ typedef NS_ENUM(NSUInteger, Direction) {
 @property(nonatomic,assign) Direction m_curDirection;
 @property(nonatomic,strong) UIColor *m_color;
 
-
+/**
+ * 偏移量
+ */
+@property(nonatomic,assign) float m_offset;
 
 /**
  显示小红点
