@@ -14,6 +14,7 @@
 		8B0D63622186AF55002DA530 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B0D63602186AF55002DA530 /* LaunchScreen.storyboard */; };
 		8B0D63652186AF55002DA530 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D63642186AF55002DA530 /* main.m */; };
 		8B0D636F2186B100002DA530 /* ColorfulWoodPointView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D636E2186B100002DA530 /* ColorfulWoodPointView.m */; };
+		8B0D63722186D690002DA530 /* UITabBar+ColorfulWoodPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D63712186D690002DA530 /* UITabBar+ColorfulWoodPoint.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,8 @@
 		8B0D636C2186B08C002DA530 /* ColorfulWoodPoint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorfulWoodPoint.h; sourceTree = "<group>"; };
 		8B0D636D2186B100002DA530 /* ColorfulWoodPointView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorfulWoodPointView.h; sourceTree = "<group>"; };
 		8B0D636E2186B100002DA530 /* ColorfulWoodPointView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorfulWoodPointView.m; sourceTree = "<group>"; };
+		8B0D63702186D690002DA530 /* UITabBar+ColorfulWoodPoint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITabBar+ColorfulWoodPoint.h"; sourceTree = "<group>"; };
+		8B0D63712186D690002DA530 /* UITabBar+ColorfulWoodPoint.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+ColorfulWoodPoint.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +85,8 @@
 				8B0D636C2186B08C002DA530 /* ColorfulWoodPoint.h */,
 				8B0D636D2186B100002DA530 /* ColorfulWoodPointView.h */,
 				8B0D636E2186B100002DA530 /* ColorfulWoodPointView.m */,
+				8B0D63702186D690002DA530 /* UITabBar+ColorfulWoodPoint.h */,
+				8B0D63712186D690002DA530 /* UITabBar+ColorfulWoodPoint.m */,
 			);
 			path = CocoapodFiles;
 			sourceTree = "<group>";
@@ -159,6 +164,7 @@
 				8B0D635A2186AF52002DA530 /* ViewController.m in Sources */,
 				8B0D63652186AF55002DA530 /* main.m in Sources */,
 				8B0D636F2186B100002DA530 /* ColorfulWoodPointView.m in Sources */,
+				8B0D63722186D690002DA530 /* UITabBar+ColorfulWoodPoint.m in Sources */,
 				8B0D63572186AF52002DA530 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

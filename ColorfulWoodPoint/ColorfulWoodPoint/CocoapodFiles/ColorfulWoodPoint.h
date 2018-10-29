@@ -10,4 +10,6 @@
 #define ColorfulWoodPoint_h
 
 #import "ColorfulWoodPointView.h"
+#import "UITabBar+ColorfulWoodPoint.h"
+
 #endif /* Header_h */
