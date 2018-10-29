@@ -19,17 +19,23 @@ static const int CWUB_POINT_TAG = 0x123;
 
 -(void) interface_showTargetView:(UIView*)targetView forCount:(NSInteger) count position:(CGPoint) pos{
     if(count < 0 ){
-        self.m_pointRadius = 10;
+        if (self.m_pointRadius<=0) {
+            self.m_pointRadius = 6;
+        }
         self.m_pointWidth = self.m_pointRadius;
         self.layer.cornerRadius = self.m_pointRadius / 2;
     }
     else if(count >= 0 && count <= 99){
-        self.m_pointRadius = 16;
+        if (self.m_pointRadius<=0) {
+            self.m_pointRadius = 16;
+        }
         self.m_pointWidth = self.m_pointRadius;
         self.layer.cornerRadius = self.m_pointRadius / 2;
         self.text = [NSString stringWithFormat:@"%ld",(long)count];
     }else{
-        self.m_pointRadius = 16;
+        if (self.m_pointRadius<=0) {
+            self.m_pointRadius = 16;
+        }
         self.m_pointWidth = self.m_pointRadius * 1.5;
         self.layer.cornerRadius = self.m_pointRadius / 2;
         self.text = @"99+";
@@ -52,17 +58,25 @@ static const int CWUB_POINT_TAG = 0x123;
 -(void)adjustSize:(UIView*)targetView forCount:(NSInteger)count location:(CWPVDirection)direction{
     self.m_curDirection = direction;
     if(count < 0 ){
-        self.m_pointRadius = 10;
+        if (self.m_pointRadius<=0) {
+            self.m_pointRadius = 6;
+        }
+
         self.m_pointWidth = self.m_pointRadius;
         self.layer.cornerRadius = self.m_pointRadius / 2;
     }
     else if(count >= 0 && count <= 99){
-        self.m_pointRadius = 16;
+
+        if (self.m_pointRadius<=0) {
+            self.m_pointRadius = 16;
+        }
         self.m_pointWidth = self.m_pointRadius;
         self.layer.cornerRadius = self.m_pointRadius / 2;
         self.text = [NSString stringWithFormat:@"%ld",(long)count];
     }else{
-        self.m_pointRadius = 16;
+        if (self.m_pointRadius<=0) {
+            self.m_pointRadius = 16;
+        }
         self.m_pointWidth = self.m_pointRadius * 1.5;
         self.layer.cornerRadius = self.m_pointRadius / 2;
         self.text = @"99+";
@@ -70,23 +84,23 @@ static const int CWUB_POINT_TAG = 0x123;
 
     switch(direction){
         case CWPV_LEFT_TOP:
-            self.frame = CGRectMake(-self.m_pointRadius / 2 - self.m_offset,-self.m_pointRadius / 2- self.m_offset,
+            self.frame = CGRectMake(-self.m_pointRadius / 2 - self.m_offset,-self.m_pointRadius / 2,
                                     self.m_pointWidth, self.m_pointRadius);
             break;
 
         case CWPV_LEFT_BOTTOM:
-            self.frame = CGRectMake(-self.m_pointRadius / 2- self.m_offset,targetView.frame.size.height - self.m_pointRadius * 0.8+self.m_offset,
+            self.frame = CGRectMake(-self.m_pointRadius / 2- self.m_offset,targetView.frame.size.height - self.m_pointRadius * 0.8,
                                     self.m_pointWidth, self.m_pointRadius);
             break;
 
         case CWPV_RIGHT_TOP:
-            self.frame = CGRectMake(targetView.frame.size.width - self.m_pointWidth / 2 + self.m_offset, -self.m_pointRadius / 2 - self.m_offset,
+            self.frame = CGRectMake(targetView.frame.size.width - self.m_pointWidth / 2 + self.m_offset, -self.m_pointRadius / 2 ,
                                     self.m_pointWidth, self.m_pointRadius);
             break;
 
         case CWPV_RIGHT_BOTTOM:
             self.frame = CGRectMake(targetView.frame.size.width - 0.8 * self.m_pointRadius + self.m_offset,
-                                    targetView.frame.size.height - self.m_pointRadius * 0.8 + self.m_offset,                                                     self.m_pointWidth, self.m_pointRadius);
+                                    targetView.frame.size.height - self.m_pointRadius * 0.8,                                                     self.m_pointWidth, self.m_pointRadius);
             break;
     }
 }

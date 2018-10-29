@@ -28,6 +28,7 @@
     ColorfulWoodPointView *pointView = [[ColorfulWoodPointView alloc] init];
     pointView.m_color = [UIColor blueColor];
     pointView.m_offset = 5.;
+    pointView.m_pointRadius = 4;
     [pointView interface_showTargetView:button forCount:-1 location:CWPV_RIGHT_TOP];
 
 

@@ -3,7 +3,7 @@
 Pod::Spec.new do |s|
 
 s.name         = "ColorfulWoodPoint"
-s.version      = "1.0.6"
+s.version      = "1.0.7"
 s.summary      = "在已有视图的四个角提交数字或圆点"
 
 s.homepage     = "https://github.com/gs01md"
