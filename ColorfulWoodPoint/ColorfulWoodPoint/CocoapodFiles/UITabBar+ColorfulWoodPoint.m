@@ -15,7 +15,7 @@
 
 
 //显示小红点
-- (void)interface_showBadgeOnItemIndex:(NSInteger)index size:(float)size color:(UIColor*)color{
+- (void)interface_showBadgeOnItemIndex:(NSInteger)index size:(float)size color:(UIColor*)color offset:(float)offset{
 
     if (size<=0) {
         size = 6.;
@@ -23,6 +23,10 @@
 
     if (!color) {
         color = [UIColor redColor];
+    }
+
+    if (offset <=0) {
+        offset = 9.;
     }
 
     [self removeBadgeOnItemIndex:index];
@@ -41,7 +45,7 @@
             // 找到需要加小红点的view，根据frame设置小红点的位置
             if (i == index) {
                 // 数字9为向右边的偏移量，可以根据具体情况调整
-                CGFloat x = subView.frame.origin.x + subView.frame.size.width / 2 + 9;
+                CGFloat x = subView.frame.origin.x + subView.frame.size.width / 2 + offset;
                 CGFloat y = 6;
                 badgeView.frame = CGRectMake(x, y, size, size);
                 break;

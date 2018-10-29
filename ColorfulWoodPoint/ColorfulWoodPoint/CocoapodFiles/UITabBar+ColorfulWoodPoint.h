@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
  size: 圆点宽高 ： <=0时，为6
  color: 圆点颜色 ：可不传，默认红
  */
-- (void)interface_showBadgeOnItemIndex:(NSInteger)index size:(float)size color:(UIColor*)color;
+- (void)interface_showBadgeOnItemIndex:(NSInteger)index size:(float)size color:(UIColor*)color offset:(float)offset;
 - (void)interface_hideBadgeOnItemIndex:(NSInteger)index;
 
 @end
