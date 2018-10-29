@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef NS_ENUM(NSUInteger, Direction) {
+typedef NS_ENUM(NSUInteger, CWPVDirection) {
     CWPV_RIGHT_TOP = 0,
     CWPV_LEFT_TOP,
     CWPV_LEFT_BOTTOM,
@@ -21,7 +21,7 @@ typedef NS_ENUM(NSUInteger, Direction) {
 
 @property(nonatomic,assign) NSInteger m_pointRadius;
 @property(nonatomic,assign) CGFloat m_pointWidth;
-@property(nonatomic,assign) Direction m_curDirection;
+@property(nonatomic,assign) CWPVDirection m_curDirection;
 @property(nonatomic,strong) UIColor *m_color;
 
 /**
@@ -36,7 +36,7 @@ typedef NS_ENUM(NSUInteger, Direction) {
  @param count 小红点个数
  @param direction 在目标视图的方位
  */
--(void) interface_showTargetView:(UIView*)targetView forCount:(NSInteger) count location:(Direction)direction;
+-(void) interface_showTargetView:(UIView*)targetView forCount:(NSInteger) count location:(CWPVDirection)direction;
 
 
 /**

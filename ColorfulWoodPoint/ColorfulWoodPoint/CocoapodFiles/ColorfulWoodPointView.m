@@ -11,7 +11,7 @@
 static const int CWUB_POINT_TAG = 0x123;
 
 @implementation ColorfulWoodPointView
--(void) interface_showTargetView:(UIView*)targetView forCount:(NSInteger) count location:(Direction)direction{
+-(void) interface_showTargetView:(UIView*)targetView forCount:(NSInteger) count location:(CWPVDirection)direction{
     if(!targetView) return;
     [self adjustSize:targetView forCount:count location:direction];
     [self buildAttr:targetView];
@@ -49,7 +49,7 @@ static const int CWUB_POINT_TAG = 0x123;
     [targetView addSubview:self];
 }
 
--(void)adjustSize:(UIView*)targetView forCount:(NSInteger)count location:(Direction)direction{
+-(void)adjustSize:(UIView*)targetView forCount:(NSInteger)count location:(CWPVDirection)direction{
     self.m_curDirection = direction;
     if(count < 0 ){
         self.m_pointRadius = 10;
